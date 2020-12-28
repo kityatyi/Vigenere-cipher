@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vigenère cipher</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="main-container">
+      <div class="vigenere-title">
+        <h1>VIGENÈRE CIPHER</h1>
+      </div>
+
+      <div class="vigenere-plaintext">
+        <textarea
+          name=""
+          id="plaintext"
+          cols="30"
+          rows="5"
+          placeholder="Enter message..."
+        ></textarea>
+      </div>
+
+      <div class="vigenere-key">
+        <input type="password" id="key" name="key" placeholder="Enter key..." />
+        <!-- <textarea name="" id="key" cols="30" rows="1" placeholder="Enter key..."></textarea> -->
+      </div>
+
+      <div class="vigenere-encrypt">
+        <input type="button" id="encrypt" value="ENCRYPT" />
+      </div>
+
+      <div class="vigenere-ciphertext">
+        <textarea
+          name=""
+          id="ciphertext"
+          cols="30"
+          rows="5"
+          placeholder="Ciphertext..."
+        ></textarea>
+      </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

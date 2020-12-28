@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #111;
+  font-family: "Courier New", Courier, monospace;
+  color: #ccc;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.vigenere-title {
+  margin-top: 33px;
+  display: flex;
+  justify-content: center;
+}
+
+.vigenere-plaintext {
+  margin-top: 33px;
+  display: flex;
+  justify-content: center;
+}
+
+.vigenere-key {
+  margin-top: 11px;
+  display: flex;
+  justify-content: center;
+}
+
+.vigenere-encrypt {
+  margin-top: 33px;
+  display: flex;
+  justify-content: center;
+}
+
+.vigenere-ciphertext {
+  margin-top: 33px;
+  display: flex;
+  justify-content: center;
+}
+
+#plaintext,
+#key,
+#ciphertext {
+  width: 333px;
+  background: linear-gradient(135deg, #333, #444);
+  font-family: "Courier New", Courier, monospace;
+  color: #ccc;
+  outline: none;
+}
+
+#encrypt {
+  width: 99px;
+  height: 33px;
+  outline: none;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #333, #444);
+  font-family: "Courier New", Courier, monospace;
+  color: #ccc;
+}
+
+#encrypt:hover {
+  background: linear-gradient(135deg, #222, #333);
+}
