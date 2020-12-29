@@ -1,26 +1,10 @@
-document.getElementById("encrypt").onclick = vigenere();
-
-//
-
-function vigenere() {
-  // grabs textarea and passwords values
-  //
-  let msg = document.getElementById("plaintext").value;
-  let key = document.getElementById("key").value;
-  //
-  let encrypted = encryptor(msg, key);
-  document.getElementById("ciphertext").value = encrypted;
-}
-
-//
-
-function encryptor(msg, key) {
+function encrypt(msg, key) {
   // https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher
   //
   msg = standardize(msg); // removes unwanted characters from message
   key = standardize(key); // removes unwanted characters from key
   //
-  let cipherMsg = ""; // initializes empty string for encrypted message
+  let encrypted = ""; // initializes empty string for encrypted message
   // prettier-ignore
   const abc = ["A", "B", "C", "D", "E", "F", "G", "H", "I", 
   "J", "K", "L", "M", "N", "O", "P", "Q", "R",
@@ -39,12 +23,12 @@ function encryptor(msg, key) {
     //
     let newLetter = newAbc[msgLetter]; // finds encrypted letter in vigenere alphabet
     //
-    cipherMsg += newLetter; // adds encrypted letters to ciphertext
+    encrypted += newLetter; // adds encrypted letters to ciphertext
   }
   //
-  cipherMsg = cipherMsg.match(/.{1,5}/g).join(" "); // arranges result in blocks of five letters
+  encrypted = encrypted.match(/.{1,5}/g).join(" "); // arranges result in blocks of five letters
   //
-  return cipherMsg; // returns encrypted message
+  return encrypted; // returns encrypted message
 }
 
 //
@@ -73,4 +57,13 @@ function standardize(str) {
   //
   return str;
 }
+
 //
+
+function vigenere() {
+  //
+  let msg = document.getElementById("plaintext").value;
+  let key = document.getElementById("key").value;
+  let output = encrypt(msg, key);
+  document.getElementById("ciphertext").innerHTML = output;
+}
