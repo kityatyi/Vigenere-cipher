@@ -48,9 +48,9 @@ body {
   justify-content: center;
 }
 
-#plaintext,
+#input,
 #key,
-#ciphertext {
+#output {
   width: 333px;
   background: linear-gradient(135deg, #333, #444);
   font-family: "Courier New", Courier, monospace;
@@ -61,6 +61,7 @@ body {
 #encrypt {
   width: 99px;
   height: 33px;
+  margin-right: 11px;
   outline: none;
   border-radius: 9px;
   background: linear-gradient(135deg, #333, #444);
@@ -68,6 +69,18 @@ body {
   color: #ccc;
 }
 
-#encrypt:hover {
+#decrypt {
+  width: 99px;
+  height: 33px;
+  margin-left: 11px;
+  outline: none;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #333, #444);
+  font-family: "Courier New", Courier, monospace;
+  color: #ccc;
+}
+
+#encrypt:hover,
+#decrypt:hover {
   background: linear-gradient(135deg, #222, #333);
 }

@@ -15,28 +15,29 @@
       <div class="vigenere-plaintext">
         <textarea
           name=""
-          id="plaintext"
+          id="input"
           cols="30"
           rows="5"
-          placeholder="Enter message..."
+          placeholder="Input..."
         ></textarea>
       </div>
 
       <div class="vigenere-key">
-        <input type="password" id="key" name="key" placeholder="Enter key..." />
+        <input type="password" id="key" name="key" placeholder="Enter key..."/>
       </div>
 
       <div class="vigenere-encrypt">
-        <input type="button" id="encrypt" value="Encrypt" onclick="vigenere()" />
+        <input type="button" id="encrypt" value="Encrypt" onclick="vigenereEncrypt()"/>
+        <input type="button" id="decrypt" value="Decrypt" onclick="vigenereDecrypt()"/>
       </div>
 
       <div class="vigenere-ciphertext">
         <textarea
           name=""
-          id="ciphertext"
+          id="output"
           cols="30"
           rows="5"
-          placeholder="Ciphertext..."
+          placeholder="Output..."
         ></textarea>
       </div>
     </div>
